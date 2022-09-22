@@ -1,0 +1,234 @@
+@model IEnumerable<App_Salary_Management.Models.Salary>
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<!-- Page Heading -->
+<h1 class="h3 mb-2 text-gray-800">Lương</h1>
+
+<!-- DataTales Example -->
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Quản ly lương</h6>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <div class="row ml-5">
+                <div class="col-sm-2">
+                    <div class="form-group row">
+                        <label for="month" class="col-form-label">Tháng </label>
+                        <div class="col-sm-6">
+                            <input type="tel" class="form-control" id="month">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group row">
+                        <label for="year" class="col-form-label">Năm </label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="year">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                <tr>
+                    <th >
+                        @Html.DisplayNameFor(model => model.EmployeeID)
+                    </th>
+                    <th >
+                        @Html.DisplayNameFor(model => model.Name)
+                    </th>
+                    <th >
+                        @Html.DisplayNameFor(model => model.Email)
+                    </th>
+                    <th >
+                        @Html.DisplayNameFor(model => model.Address)
+                    </th>
+                    <th >
+                        @Html.DisplayNameFor(model => model.Phone)
+                    </th>
+                    <th >
+                        @Html.DisplayNameFor(model => model.BaseSalary)
+                    </th>
+                    <th >
+                        @Html.DisplayNameFor(model => model.Salaryb)
+                    </th>
+                    <th >
+                        @Html.DisplayNameFor(model => model.Moth)
+                    </th>
+                    <th >
+                        @Html.DisplayNameFor(model => model.year)
+                    </th>
+                    <th >
+                        @Html.DisplayNameFor(model => model.WorkNumberDay)
+                    </th>
+                </tr>
+                </thead>
+                <tfoot>
+                <tr>
+                    <th >
+                        @Html.DisplayNameFor(model => model.EmployeeID)
+                    </th>
+                    <th >
+                        @Html.DisplayNameFor(model => model.Name)
+                    </th>
+                    <th >
+                        @Html.DisplayNameFor(model => model.Email)
+                    </th>
+                    <th >
+                        @Html.DisplayNameFor(model => model.Address)
+                    </th>
+                    <th >
+                        @Html.DisplayNameFor(model => model.Phone)
+                    </th>
+                    <th >
+                        @Html.DisplayNameFor(model => model.BaseSalary)
+                    </th>
+                    <th >
+                        @Html.DisplayNameFor(model => model.Salaryb)
+                    </th>
+                    <th >
+                        @Html.DisplayNameFor(model => model.Moth)
+                    </th>
+                    <th >
+                        @Html.DisplayNameFor(model => model.year)
+                    </th>
+                    <th >
+                        @Html.DisplayNameFor(model => model.WorkNumberDay)
+                    </th>
+                </tr>
+                </tfoot>
+                <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.EmployeeID)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Email)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Address)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Phone)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.BaseSalary)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Salaryb)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Moth)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.year)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.WorkNumberDay)
+                        </td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+<!-- 
+
+@* <h1>Index</h1> *@
+@* *@
+@* *@
+@* <table id="table_id" class="display"> *@
+@*     <thead> *@
+@*     <tr> *@
+@*         <th> *@
+@*             @Html.DisplayNameFor(model => model.EmployeeID) *@
+@*         </th> *@
+@*         <th> *@
+@*             @Html.DisplayNameFor(model => model.Name) *@
+@*         </th> *@
+@*         <th> *@
+@*             @Html.DisplayNameFor(model => model.Email) *@
+@*         </th> *@
+@*         <th> *@
+@*             @Html.DisplayNameFor(model => model.Address) *@
+@*         </th> *@
+@*         <th> *@
+@*             @Html.DisplayNameFor(model => model.Phone) *@
+@*         </th> *@
+@*         <th> *@
+@*             @Html.DisplayNameFor(model => model.BaseSalary) *@
+@*         </th> *@
+@*         <th> *@
+@*             @Html.DisplayNameFor(model => model.Salaryb) *@
+@*         </th> *@
+@*         <th> *@
+@*             @Html.DisplayNameFor(model => model.Moth) *@
+@*         </th> *@
+@*         <th> *@
+@*             @Html.DisplayNameFor(model => model.year) *@
+@*         </th> *@
+@*         <th> *@
+@*             @Html.DisplayNameFor(model => model.WorkNumberDay) *@
+@*         </th> *@
+@*         <th></th> *@
+@*     </tr> *@
+@*     </thead> *@
+@*     <tbody> *@
+@*     @foreach (var item in Model) *@
+@*     { *@
+@*         <tr> *@
+@*             <td> *@
+@*                 @Html.DisplayFor(modelItem => item.EmployeeID) *@
+@*             </td> *@
+@*             <td> *@
+@*                 @Html.DisplayFor(modelItem => item.Name) *@
+@*             </td> *@
+@*             <td> *@
+@*                 @Html.DisplayFor(modelItem => item.Email) *@
+@*             </td> *@
+@*             <td> *@
+@*                 @Html.DisplayFor(modelItem => item.Address) *@
+@*             </td> *@
+@*             <td> *@
+@*                 @Html.DisplayFor(modelItem => item.Phone) *@
+@*             </td> *@
+@*             <td> *@
+@*                 @Html.DisplayFor(modelItem => item.BaseSalary) *@
+@*             </td> *@
+@*             <td> *@
+@*                 @Html.DisplayFor(modelItem => item.Salaryb) *@
+@*             </td> *@
+@*             <td> *@
+@*                 @Html.DisplayFor(modelItem => item.Moth) *@
+@*             </td> *@
+@*             <td> *@
+@*                 @Html.DisplayFor(modelItem => item.year) *@
+@*             </td> *@
+@*             <td> *@
+@*                 @Html.DisplayFor(modelItem => item.WorkNumberDay) *@
+@*             </td> *@
+@*             <td> *@
+@*                 @* <a asp-action="Edit" asp-route-id="@item.TimeSheetID">Edit</a> | *@
+@*                 @* <a asp-action="Details" asp-route-id="@item.TimeSheetID">Details</a> | *@
+@*                 @* <a asp-action="Delete" asp-route-id="@item.TimeSheetID">Delete</a> *@
+@*             </td> *@
+@*         </tr> *@
+@*     } *@
+@*     </tbody> *@
+@* </table> *@
+

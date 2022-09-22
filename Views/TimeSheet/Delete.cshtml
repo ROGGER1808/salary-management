@@ -1,0 +1,32 @@
+@model App_Salary_Management.Models.TimeSheet
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h4>Bạn có chắc muốn xoá?</h4>
+<div>
+    <h5>Điểm danh</h5>
+    <hr/>
+    <dl class="row justify-content-center mt-5 mb-5">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.date)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.date)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Employee)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Employee.Name)
+        </dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="TimeSheetID"/>
+        <input type="submit" value="Xác nhận xoá" class="btn btn-danger"/> |
+        <a asp-action="Index">Trở lại danh sách</a>
+    </form>
+</div>
