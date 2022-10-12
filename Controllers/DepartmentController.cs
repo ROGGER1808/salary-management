@@ -38,6 +38,7 @@ namespace App_Salary_Management.Controllers
                 return NotFound();
             }
 
+
             var department = await _context.Departments
                 .FirstOrDefaultAsync(m => m.DepartmentID == id);
             if (department == null)
